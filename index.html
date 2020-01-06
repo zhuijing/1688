@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="views/css/reset.css">
+  <link rel="stylesheet" href="views/css/common.css">
+  <title>图片提取器</title>
+  <!-- <script src='views/js/isExpire.js'></script> -->
+  <script src='views/config/config.js'></script>
+  <script src='views/js/load.js'></script>
+</head>
+<body>
+  <header>
+    <ul class="tabs-wrap">
+      <li data-id="1688" class="active">获取1688图片</li>
+      <li data-id="amazon">获取Amazon图片</li>
+    </ul>
+  </header>
+  <div id='container'></div>
+  <script>
+    var oHli = document.querySelectorAll('header .tabs-wrap li')
+    oHli.forEach(v => {
+      v.onclick = function(e) {
+        var oHli = document.querySelectorAll('header .tabs-wrap li')
+        oHli.forEach(v => {
+          v.className = ''
+        })
+        var target = e.target;
+        var sId = target.dataset.id;
+        this.className = 'active';
+        var load = new Load('#container',pageConfig[sId])  ;
+        load._init()
+      }
+    })
+  </script>
+  <script>
+    var load = new Load('#container',pageConfig['1688'])  ;
+    load._init()
+  </script>
+</body>
+</html>

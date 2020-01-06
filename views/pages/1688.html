@@ -1,0 +1,44 @@
+  
+  <div class="box" id='img1688'>
+      <ul id='ul' class="ul-list">
+          <li class="li-item">
+              <lable>图片保存至<input type="text" placeholder="请输入文件夹名" value=""></lable>
+              <lable>产品地址<input type="text" placeholder="请输入产品地址" value=""></lable>
+              <button>删除</button>
+          </li>
+      </ul>
+      <div class="btn-group">
+          <!-- <div class="savedir">
+            <span></span>
+            <button class="setDir">
+              修改保存目录
+            </button>
+          </div> -->
+          <button class="pqzt">
+              爬取详情图
+              <label for="爬取详情图"></label>
+              <input type="checkbox" id='爬取详情图' name='xiangqing'>
+            </button>
+          <button class="pqzt">
+            爬取主图
+            <label for="爬取主图"></label>
+            <input type="checkbox" id='爬取主图' checked name='zhutu'>
+          </button>
+          <button id='reset'>重置</button>
+          <button id='clearInput'>清空内容</button>
+          <button id='addInput'>添加输入</button>
+          <button  id='downbtn'>下载</button>
+      </div>
+  </div>
+  
+    <script>
+      // // 提示保存目录
+      // var dir = process.cwd();
+      // var selectDir = document.querySelector('#selectDir');
+      // var osavedir = document.querySelector('.savedir span');
+      // osavedir.innerHTML = `保存至：${dir}`;
+      // selectDir.onchange = function(e) {
+      //  osavedir.innerHTML = `保存至：${e.target.value}`;
+      // }
+    </script>
+   

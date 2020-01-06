@@ -1,0 +1,15 @@
+header .tabs-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid #ccc;
+}
+header .tabs-wrap li{
+  text-align: center;
+  flex: 1;
+}
+header .tabs-wrap li.active{
+  color: red;
+}
